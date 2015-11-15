@@ -16,11 +16,6 @@ angular.module('angularjsGiphyAppApp')
       }
     };
 
-    $scope.update = function(gif){
-      $scope.search = gif.tag;
-      $scope.change();
-    };
-
     $scope.fetch = function(){
       var deferred = $q.defer();
       $http.get('//api.giphy.com/v1/gifs/' +
