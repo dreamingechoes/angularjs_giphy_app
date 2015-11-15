@@ -1,7 +1,6 @@
 <h1>Gifs</h1>
 
-<div class="row">
-
+<div class="row marketing">
   <div class="form-group col-md-12" style="display:inline;">
     <div class="input-group">
       <input class="form-control" placeholder="What are searching for?"
@@ -13,9 +12,10 @@
   </div>
 
   <div class="form-group col-md-12" style="display:inline;">
-    <div class="input-group">
+    <div class="input-group col-md-12">
       <select class="form-control" name="limit"
               ng-model="limit" ng-change="change()">
+        <option value="" ng-if="!limit">Select number of results</option>
         <option value="6">6</option>
         <option value="12">12</option>
         <option value="18">18</option>
@@ -23,12 +23,22 @@
     </div>
   </div>
 
+  <div class="form-group col-md-12" style="display:inline;">
+    <div class="input-group col-md-12">
+      <select class="form-control" name="method"
+              ng-model="method" ng-change="change()">
+        <option value="" ng-if="!method">Select API method</option>
+        <option value="search">Search</option>
+        <option value="trending">Trending</option>
+      </select>
+    </div>
+  </div>
 </div>
 
-<div ng-if="gifs" class="row">
+<div ng-if="gifs" class="row marketing gifs">
   <div ng-repeat="gif in gifs" class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="{{ gif.images.original_still.url }}" alt="" />
+      <img src="{{ gif.images.downsized.url }}" alt="" />
       <div class="caption">
         <p> <strong>ID: </strong>{{ gif.id }} </p>
         <p> <strong>Source: </strong>{{ gif.source_tld }} </p>
@@ -38,6 +48,8 @@
   </div>
 </div>
 
-<div ng-if="!gifs" class="row empty">
-<div class="alert alert-danger" role="alert"> <strong>Error:</strong> No results found! :( </div>
+<div ng-if="!gifs" class="row marketing empty">
+  <div class="alert alert-danger" role="alert">
+    No results found! :(
+  </div>
 </div>
