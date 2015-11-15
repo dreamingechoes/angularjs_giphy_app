@@ -19,7 +19,7 @@ First thing you we'll need is have `node.js` installed on your system. If you do
 user@computer:~$ npm install -g yo
 ```
 
-The `-g` flag tells `node.js` to install Yeoman globally on your system. It's very important to use this flag because if we don't specify, it's going to be installed locally in the folder you are and you won't be able to run it as a command. Then, let's install [generator-webapp](https://www.npmjs.com/package/generator-webapp), which is a Yeoman generator that scaffolds out a frontend web app:
+The `-g` flag tells `node.js` to install Yeoman globally on your system. It's very important to use this flag because if we don't specify, it's going to be installed locally in the folder you are and you won't be able to run it as a command. Then, let's install [generator-angular](https://www.npmjs.com/package/generator-angular), which is a Yeoman generator that scaffolds out a frontend web app:
 
 ```sh
 user@computer:~$ npm install -g generator-angular
