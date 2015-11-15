@@ -24,12 +24,7 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .when('/gif', {
+      .when('/gifs', {
         templateUrl: 'views/gif.html',
         controller: 'GifCtrl',
         controllerAs: 'gif'
